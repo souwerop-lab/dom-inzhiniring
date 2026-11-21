@@ -1,0 +1,4 @@
+document.addEventListener('submit',function(e){var f=e.target;if(!f.matches('form')||!f.querySelector('[name=phone],[type=tel]'))return;e.preventDefault();
+var c=f.querySelector('[name=consent]');if(c&&!c.checked){alert('Отметьте согласие на обработку персональных данных.');return;}
+var m=f.querySelector('.demo-note')||document.createElement('p');m.className='demo-note';m.style.cssText='margin-top:14px;padding:12px 16px;border-radius:8px;background:#e8f3ec;color:#1d4d32;font-size:15px';
+m.textContent='Это демо-копия сайта: заявка не отправлена. На рабочем сайте она приходит владельцу в Telegram и на почту и сохраняется в админке.';f.appendChild(m);},true);
